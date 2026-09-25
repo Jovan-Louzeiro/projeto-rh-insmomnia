@@ -11,9 +11,9 @@ environments:
   meta:
     id: env_92f808adf5a2b42fd3be3074247742a881ce4c5a
     created: 1789411499734
-    modified: 1790183802652
+    modified: 1790302729894
     isPrivate: false
   data:
     base_url: http://localhost:3000
     token_access: Barear
-      eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicGVybWlzc2FvIjoiQURNSU4iLCJpYXQiOjE3OTAxODM3ODUsImV4cCI6MTc5MDIxMjU4NX0.JwEMYUiCyOcxsCUjdUILV38Hi9ar9N5ZxMcCsLxam2Q
+      eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicGVybWlzc2FvIjoiQURNSU4iLCJpYXQiOjE3OTAzMDI3MjIsImV4cCI6MTc5MDMzMTUyMn0.MjePFCvClgDe0mgzII0A0vmmBQkzSm9FRr-QU4QG3zc

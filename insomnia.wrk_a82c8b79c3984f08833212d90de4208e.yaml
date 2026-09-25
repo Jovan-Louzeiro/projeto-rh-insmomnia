@@ -7,12 +7,12 @@ meta:
   modified: 1789953034619
   description: ""
 collection:
-  - url: "{{base_url}}/api/TipoEnsinoMedioCursado"
-    name: /sexos
+  - url: "{{base_url}}/api/escolaridade"
+    name: /escolaridade
     meta:
       id: req_87500e80a1a94669b5670b9b5cd76f69
       created: 1787662720612
-      modified: 1789972218716
+      modified: 1790305323918
       isPrivate: false
       description: ""
       sortKey: -1788358570289.75
