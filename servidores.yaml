@@ -1,0 +1,198 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Servidores
+meta:
+  id: wrk_ac60151b9db34a9ea85886bd2ade5817
+  created: 1791179785726
+  modified: 1791179935106
+  description: ""
+collection:
+  - url: "{{base_url}}/api/servidores"
+    name: /servidores
+    meta:
+      id: req_992d61c2dfff4c9484074c4f73f6fb7a
+      created: 1787662720612
+      modified: 1791208055225
+      isPrivate: false
+      description: ""
+      sortKey: -1788358570289.75
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base_url}}/api/servidores"
+    name: /servidores
+    meta:
+      id: req_67042ec1b0a54e5aabf1bfa66553d46a
+      created: 1787840766207
+      modified: 1791210317089
+      isPrivate: false
+      description: ""
+      sortKey: -1788358247755.0625
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"ativo": true,
+        	
+        	"nome_completo": "Jovan Louzeiro Silva",
+        	"cpf": "633.669.520-40",
+        	"nis_pis": "67487952647",
+        	
+        	"data_nascimento": "21/06/2008",
+        	"nacionalidade_id": 1,
+        	"pais_origem_id": 1,
+        	"municipio_nascimento_id": 1,
+        	
+        	"cpf_mae": "139.836.860-10",
+        	"nome_mae": "Hilda Maria Seleiro Louzeiro",
+        	"cpf_pai": "386.942.730-20",
+        	"nome_pai": "Não tem",
+        	
+        	"estado_civil_id": 1,
+        	"uniao_estavel": false,
+        	
+        	"sexo_id": 1,
+        	"genero_id": 1,
+        	"racacor_id": 3,
+        	
+        	"cep": "65295-000",
+        	"logradouro": "Rua Doutor Paulo Ramos",
+        	"numero": "1044",
+        	"bairro": "Santa Luzia",
+        	"municipio_endereco_id": 1,
+        	"zona_endereco_id": 1,
+        	
+        	"cartao_sus": "879777774123456",
+        	
+        	"situacao_id": 1,
+        	"escolaridade_id": 2,
+        	"tipo_ensino_medio_cursado_id":  3,
+        	
+        	"observacao": "ALUNO"
+        	
+        	
+        	
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        disabled: false
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base_url}}/api/servidores/11"
+    name: /servidores/:id
+    meta:
+      id: req_3b519f58cf2e489c8cda6e587c0d82ef
+      created: 1788273963129
+      modified: 1791179812840
+      isPrivate: false
+      description: ""
+      sortKey: -1788358355266.625
+    method: GET
+    headers:
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base_url}}/api/generos/11"
+    name: /servidores/:id
+    meta:
+      id: req_ba2e9c4affd7497c9734f087af77f420
+      created: 1788357280151
+      modified: 1791179882987
+      isPrivate: false
+      description: ""
+      sortKey: -1788357280151
+    method: DELETE
+    headers:
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ base_url }}/api/servidores/1"
+    name: /servidores/:id
+    meta:
+      id: req_7e57cfa17c364a8fad32088b086923f8
+      created: 1788360720421
+      modified: 1791210455380
+      isPrivate: false
+      description: ""
+      sortKey: -1788358140243.5
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"complemento": ""
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_fb86111f80a349a3a482af4621f5046e
+    created: 1787662720565
+    modified: 1787662720565
+environments:
+  name: Base Environment
+  meta:
+    id: env_4216e86d635647da9ab4c4e945adefc9
+    created: 1787662720564
+    modified: 1789412363872
+    isPrivate: false

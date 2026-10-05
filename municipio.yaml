@@ -1,0 +1,166 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Município
+meta:
+  id: wrk_4b779564f9e74cbea5adc3f388ea92e5
+  created: 1790952894882
+  modified: 1790952906563
+  description: ""
+collection:
+  - url: "{{base_url}}/api/municipios"
+    name: /municipios
+    meta:
+      id: req_0bf2f0e931f74195a1860b53d9c9a9f1
+      created: 1787662720612
+      modified: 1790952934835
+      isPrivate: false
+      description: ""
+      sortKey: -1788358570289.75
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters:
+      - name: mostrarTudo
+        value: "true"
+        description: ""
+        disabled: false
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base_url}}/api/municipios/"
+    name: /municipios
+    meta:
+      id: req_a673bbbfec8e4fb3b2e40afd34e40e29
+      created: 1787840766207
+      modified: 1790953014227
+      isPrivate: false
+      description: ""
+      sortKey: -1788358247755.0625
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome": "Chína",
+        	"gentilico": "Chinês",
+        	"codigo_iso": "CN"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        disabled: false
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base_url}}/api/municipios/15"
+    name: /municipios/:id
+    meta:
+      id: req_578f2bdafd774f3a8efb5b1fc324b1d9
+      created: 1788273963129
+      modified: 1791208532044
+      isPrivate: false
+      description: ""
+      sortKey: -1788358355266.625
+    method: GET
+    headers:
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base_url}}/api/estados/27"
+    name: /municipios/:id
+    meta:
+      id: req_8a134d27233844b4ac62cb7f1614d9ec
+      created: 1788357280151
+      modified: 1790953067026
+      isPrivate: false
+      description: ""
+      sortKey: -1788357280151
+    method: DELETE
+    headers:
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ base_url }}/api/municipios/27"
+    name: /municipios/:id
+    meta:
+      id: req_67425388bb944de4b6ce6000a12707d4
+      created: 1788360720421
+      modified: 1790953059763
+      isPrivate: false
+      description: ""
+      sortKey: -1788358140243.5
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"ativo": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_0c797c37df36427ba131319f26935b40
+    created: 1787662720565
+    modified: 1787662720565
+environments:
+  name: Base Environment
+  meta:
+    id: env_a134a356c72d4dd0a1a0e6c41ea512b2
+    created: 1787662720564
+    modified: 1789412363872
+    isPrivate: false

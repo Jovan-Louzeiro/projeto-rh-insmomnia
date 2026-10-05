@@ -4,7 +4,7 @@ name: Usuarios
 meta:
   id: wrk_d6800b13e0d042f98d1e51c8ae38a074
   created: 1788756412066
-  modified: 1789411298506
+  modified: 1790882450627
   description: ""
 collection:
   - url: "{{ _.base_url }}/api/usuarios"
@@ -30,12 +30,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: "{{ _.base_url }}/api/usuarios/5"
+  - url: "{{ _.base_url }}/api/usuarios/1"
     name: /usuarios/:id
     meta:
       id: req_67f3222cce624bb798e7903f05897117
       created: 1789531667297
-      modified: 1789534182576
+      modified: 1790910345119
       isPrivate: false
       description: ""
       sortKey: -1789531667297

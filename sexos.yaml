@@ -4,7 +4,7 @@ name: Sexos
 meta:
   id: wrk_2c0413b8ca3349199bb035087a8c0b18
   created: 1787662720562
-  modified: 1788269068811
+  modified: 1790882435632
   description: ""
 collection:
   - url: "{{base_url}}/api/sexos?mostrarTudo=true"
@@ -40,7 +40,7 @@ collection:
     meta:
       id: req_194a190cf0454d4791a14f75bbfad8c7
       created: 1787840766207
-      modified: 1790188300107
+      modified: 1791153103897
       isPrivate: false
       description: ""
       sortKey: -1788358247755.0625
@@ -49,7 +49,8 @@ collection:
       mimeType: application/json
       text: |-
         {
-        	"descricao": "M"
+        	"descricao": "",
+        	"ativo": false
         }
     headers:
       - name: Content-Type
@@ -67,12 +68,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: "{{base_url}}/api/sexos/3"
+  - url: "{{base_url}}/api/sexos/62"
     name: /sexos/:id
     meta:
       id: req_d87567d38cea41aa82734eeaec349319
       created: 1788273963129
-      modified: 1789412157973
+      modified: 1791152398067
       isPrivate: false
       description: ""
       sortKey: -1788358355266.625
@@ -90,12 +91,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: "{{base_url}}/api/sexos/8"
+  - url: "{{base_url}}/api/sexos/62"
     name: /sexos/:id
     meta:
       id: req_0ae42e44bf97432b81234020194e81ab
       created: 1788357280151
-      modified: 1789941882684
+      modified: 1791152405601
       isPrivate: false
       description: ""
       sortKey: -1788357280151
@@ -113,12 +114,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: "{{ base_url }}/api/sexos/1"
+  - url: "{{ base_url }}/api/sexos/62"
     name: /sexos/:id
     meta:
       id: req_730fadd8b2ee4b3a97ed7ca4a8019add
       created: 1788360720421
-      modified: 1790189726943
+      modified: 1791152390950
       isPrivate: false
       description: ""
       sortKey: -1788358140243.5
@@ -127,7 +128,7 @@ collection:
       mimeType: application/json
       text: |-
         {
-        	"descricao": "F"
+        	"ativo": true
         }
     headers:
       - name: Content-Type

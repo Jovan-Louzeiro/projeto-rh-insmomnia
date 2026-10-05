@@ -58,7 +58,7 @@ collection:
     meta:
       id: req_76602fc856504ebbb4e1d7aeb5e5e409
       created: 1789935524814
-      modified: 1789941527018
+      modified: 1791213368677
       isPrivate: false
       description: ""
       sortKey: -1789935524814
@@ -67,8 +67,9 @@ collection:
       mimeType: application/json
       text: |-
         {
-        	"descricao": "Azul",
-        	"ativo": true
+        	"descricao": "Unidade Integrada Moacir Heráclito dos Remédios (UEMHR)",
+        	"ativo": true,
+        	"inep": "21067287"
         }
     headers:
       - name: Content-Type

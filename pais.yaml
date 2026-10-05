@@ -1,0 +1,189 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: País
+meta:
+  id: wrk_0b0b5c69dda04e07a82a6a5749fbb9b0
+  created: 1790882523903
+  modified: 1790882542152
+  description: ""
+collection:
+  - url: "{{base_url}}/api/pais"
+    name: /pais
+    meta:
+      id: req_562635ff31d148c89301cc0f5a7fae56
+      created: 1787662720612
+      modified: 1790902652394
+      isPrivate: false
+      description: ""
+      sortKey: -1788358570289.75
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters:
+      - name: mostrarTudo
+        value: "true"
+        description: ""
+        disabled: false
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base_url}}/api/pais/"
+    name: /pais
+    meta:
+      id: req_f499e0ad591e4767a799da170c4dd752
+      created: 1787840766207
+      modified: 1790903967729
+      isPrivate: false
+      description: ""
+      sortKey: -1788358247755.0625
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome": "Chína",
+        	"gentilico": "Chinês",
+        	"codigo_iso": 123
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        disabled: false
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base_url}}/api/pais/1"
+    name: /pais/:id
+    meta:
+      id: req_428fe2c7b883498886108ae6dd4cae12
+      created: 1788273963129
+      modified: 1790906093800
+      isPrivate: false
+      description: ""
+      sortKey: -1788358355266.625
+    method: GET
+    headers:
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base_url}}/api/pais/27"
+    name: /pais/:id
+    meta:
+      id: req_4546a3b5aa254e19bee7fb0a0b8f0d0f
+      created: 1788357280151
+      modified: 1790885019894
+      isPrivate: false
+      description: ""
+      sortKey: -1788357280151
+    method: DELETE
+    headers:
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ base_url }}/api/pais/27"
+    name: /pais/:id
+    meta:
+      id: req_663fb1162cb04ecb901e104867b26e8e
+      created: 1788360720421
+      modified: 1790885014523
+      isPrivate: false
+      description: ""
+      sortKey: -1788358140243.5
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"ativo": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base_url}}/api/pais/1/estados"
+    name: /pais/:id/estados
+    meta:
+      id: req_cd87c5eb092a40d69a82fc2a12e66ba2
+      created: 1790901050444
+      modified: 1790901300359
+      isPrivate: false
+      description: ""
+      sortKey: -1788358301510.8438
+    method: GET
+    headers:
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_70842b5f66c6450bb3fe8c361152bf19
+    created: 1787662720565
+    modified: 1787662720565
+environments:
+  name: Base Environment
+  meta:
+    id: env_601f3580cd0547f4ab58919acc468e5c
+    created: 1787662720564
+    modified: 1789412363872
+    isPrivate: false

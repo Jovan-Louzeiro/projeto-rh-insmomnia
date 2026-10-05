@@ -1,0 +1,166 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Estado
+meta:
+  id: wrk_ef5d76b5dd66418385180ba04888ca9a
+  created: 1790887601759
+  modified: 1790887601759
+  description: ""
+collection:
+  - url: "{{base_url}}/api/estados"
+    name: /estados
+    meta:
+      id: req_9fb3cfb0e1f74dc9a0cd9361c1655584
+      created: 1787662720612
+      modified: 1790887951782
+      isPrivate: false
+      description: ""
+      sortKey: -1788358570289.75
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters:
+      - name: mostrarTudo
+        value: "true"
+        description: ""
+        disabled: false
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base_url}}/api/estados/"
+    name: /estados
+    meta:
+      id: req_ac017283c49342f89e0f6b23603d03a5
+      created: 1787840766207
+      modified: 1790887646635
+      isPrivate: false
+      description: ""
+      sortKey: -1788358247755.0625
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome": "Chína",
+        	"gentilico": "Chinês",
+        	"codigo_iso": "CN"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        disabled: false
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base_url}}/api/estados/3"
+    name: /estados/:id
+    meta:
+      id: req_b69fee31a01b4ae2b4dbc1be19e57eba
+      created: 1788273963129
+      modified: 1790887633133
+      isPrivate: false
+      description: ""
+      sortKey: -1788358355266.625
+    method: GET
+    headers:
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{base_url}}/api/estados/27"
+    name: /estados/:id
+    meta:
+      id: req_c4e60e06d92a4d3da893458be8a27470
+      created: 1788357280151
+      modified: 1790887686863
+      isPrivate: false
+      description: ""
+      sortKey: -1788357280151
+    method: DELETE
+    headers:
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ base_url }}/api/estados/27"
+    name: /estados/:id
+    meta:
+      id: req_7276385d7483421082d6d77212c486a9
+      created: 1788360720421
+      modified: 1790887673263
+      isPrivate: false
+      description: ""
+      sortKey: -1788358140243.5
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"ativo": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_8ee6f58210c644b89db34945c0274d10
+    created: 1787662720565
+    modified: 1787662720565
+environments:
+  name: Base Environment
+  meta:
+    id: env_98bf6549c678479283ac512dc40a8d02
+    created: 1787662720564
+    modified: 1789412363872
+    isPrivate: false
