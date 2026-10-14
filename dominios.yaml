@@ -1,0 +1,2897 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: DOMINIOS
+meta:
+  id: wrk_11f78757240042b0b3d8ffb253faa20d
+  created: 1791977186156
+  modified: 1791977186156
+  description: ""
+collection:
+  - name: Município
+    meta:
+      id: fld_2bc84c4bc85b415ba94e77877bb47f26
+      created: 1791977242967
+      modified: 1791977271456
+      sortKey: -1791977271331
+      description: ""
+    children:
+      - url: "{{base_url}}/api/municipios"
+        name: /municipios
+        meta:
+          id: req_0bf2f0e931f74195a1860b53d9c9a9f1
+          created: 1787662720612
+          modified: 1791977250701
+          isPrivate: false
+          description: ""
+          sortKey: -1791977250648
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        parameters:
+          - name: mostrarTudo
+            value: "true"
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/municipios/"
+        name: /municipios
+        meta:
+          id: req_a673bbbfec8e4fb3b2e40afd34e40e29
+          created: 1787840766207
+          modified: 1791977256150
+          isPrivate: false
+          description: ""
+          sortKey: -1791977250598
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Chína",
+            	"gentilico": "Chinês",
+            	"codigo_iso": "CN"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/municipios/15"
+        name: /municipios/:id
+        meta:
+          id: req_578f2bdafd774f3a8efb5b1fc324b1d9
+          created: 1788273963129
+          modified: 1791977254314
+          isPrivate: false
+          description: ""
+          sortKey: -1791977250548
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/estados/27"
+        name: /municipios/:id
+        meta:
+          id: req_8a134d27233844b4ac62cb7f1614d9ec
+          created: 1788357280151
+          modified: 1791977260373
+          isPrivate: false
+          description: ""
+          sortKey: -1791977250748
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/api/municipios/27"
+        name: /municipios/:id
+        meta:
+          id: req_67425388bb944de4b6ce6000a12707d4
+          created: 1788360720421
+          modified: 1791977258663
+          isPrivate: false
+          description: ""
+          sortKey: -1791977250623
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Estado
+    meta:
+      id: fld_6f303f17dc6d4702a3e0fb0aee844a07
+      created: 1791977301893
+      modified: 1791977316050
+      sortKey: -1791977271431
+      description: ""
+    children:
+      - url: "{{base_url}}/api/estados"
+        name: /estados
+        meta:
+          id: req_9fb3cfb0e1f74dc9a0cd9361c1655584
+          created: 1787662720612
+          modified: 1791977304958
+          isPrivate: false
+          description: ""
+          sortKey: -1791977304827
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        parameters:
+          - name: mostrarTudo
+            value: "true"
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/estados/"
+        name: /estados
+        meta:
+          id: req_ac017283c49342f89e0f6b23603d03a5
+          created: 1787840766207
+          modified: 1791977308234
+          isPrivate: false
+          description: ""
+          sortKey: -1791977305027
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Chína",
+            	"gentilico": "Chinês",
+            	"codigo_iso": "CN"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/estados/3"
+        name: /estados/:id
+        meta:
+          id: req_b69fee31a01b4ae2b4dbc1be19e57eba
+          created: 1788273963129
+          modified: 1791977306538
+          isPrivate: false
+          description: ""
+          sortKey: -1791977304927
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/estados/27"
+        name: /estados/:id
+        meta:
+          id: req_c4e60e06d92a4d3da893458be8a27470
+          created: 1788357280151
+          modified: 1791977314033
+          isPrivate: false
+          description: ""
+          sortKey: -1791977305227
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/api/estados/27"
+        name: /estados/:id
+        meta:
+          id: req_7276385d7483421082d6d77212c486a9
+          created: 1788360720421
+          modified: 1791977310050
+          isPrivate: false
+          description: ""
+          sortKey: -1791977305127
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Gênero
+    meta:
+      id: fld_2d98322bfeef42cb849977ea74eed819
+      created: 1791977357835
+      modified: 1791977431002
+      sortKey: -1791977271531
+      description: ""
+    children:
+      - url: "{{base_url}}/api/generos"
+        name: /generos
+        meta:
+          id: req_d69446be205f470fb3cf7bb2a737946b
+          created: 1787662720612
+          modified: 1791977360269
+          isPrivate: false
+          description: ""
+          sortKey: -1791977360127
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/generos"
+        name: /generos
+        meta:
+          id: req_6eec61ac1d54462cb8a0d7916e769bf6
+          created: 1787840766207
+          modified: 1791977363127
+          isPrivate: false
+          description: ""
+          sortKey: -1791977359927
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Hokooomem"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/generos/2"
+        name: /generos/:id
+        meta:
+          id: req_aa788460c1f44a61b1363cf11cb60fa8
+          created: 1788273963129
+          modified: 1791977361811
+          isPrivate: false
+          description: ""
+          sortKey: -1791977360027
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/generos/13"
+        name: /generos/:id
+        meta:
+          id: req_29db3c48e0e64f57b7eed9ecade0e420
+          created: 1788357280151
+          modified: 1791977365803
+          isPrivate: false
+          description: ""
+          sortKey: -1791977359727
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/api/generos/13"
+        name: /generos/:id
+        meta:
+          id: req_d857a392f47f4f54bcee98ade0608e69
+          created: 1788360720421
+          modified: 1791977364416
+          isPrivate: false
+          description: ""
+          sortKey: -1791977359827
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "M",
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: País
+    meta:
+      id: fld_6f4801fe18a243d8afc4741ead63495b
+      created: 1791977454946
+      modified: 1791977530332
+      sortKey: -1791977271631
+      description: ""
+    children:
+      - url: "{{base_url}}/api/pais"
+        name: /pais
+        meta:
+          id: req_562635ff31d148c89301cc0f5a7fae56
+          created: 1787662720612
+          modified: 1791977519425
+          isPrivate: false
+          description: ""
+          sortKey: -1791977519347
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        parameters:
+          - name: mostrarTudo
+            value: "true"
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/pais/"
+        name: /pais
+        meta:
+          id: req_f499e0ad591e4767a799da170c4dd752
+          created: 1787840766207
+          modified: 1791977523468
+          isPrivate: false
+          description: ""
+          sortKey: -1791977519047
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Chína",
+            	"gentilico": "Chinês",
+            	"codigo_iso": 123
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/pais/1"
+        name: /pais/:id
+        meta:
+          id: req_428fe2c7b883498886108ae6dd4cae12
+          created: 1788273963129
+          modified: 1791977521149
+          isPrivate: false
+          description: ""
+          sortKey: -1791977519247
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/pais/27"
+        name: /pais/:id
+        meta:
+          id: req_4546a3b5aa254e19bee7fb0a0b8f0d0f
+          created: 1788357280151
+          modified: 1791977525718
+          isPrivate: false
+          description: ""
+          sortKey: -1791977518847
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/api/pais/27"
+        name: /pais/:id
+        meta:
+          id: req_663fb1162cb04ecb901e104867b26e8e
+          created: 1788360720421
+          modified: 1791977524613
+          isPrivate: false
+          description: ""
+          sortKey: -1791977518947
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/pais/1/estados"
+        name: /pais/:id/estados
+        meta:
+          id: req_cd87c5eb092a40d69a82fc2a12e66ba2
+          created: 1790901050444
+          modified: 1791977522342
+          isPrivate: false
+          description: ""
+          sortKey: -1791977519147
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Zona de Endereço
+    meta:
+      id: fld_f81090d2975a40199654933071a3a30d
+      created: 1791977563823
+      modified: 1791977576671
+      sortKey: -1791977271731
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/api/zonaEndereco"
+        name: /zonaEndereco
+        meta:
+          id: req_6f33a8ce41684b66a443cae3772c71a9
+          created: 1789935291958
+          modified: 1791977572299
+          isPrivate: false
+          description: ""
+          sortKey: -1791977566905
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/zonaEndereco/1"
+        name: /zonaEndereco/:id
+        meta:
+          id: req_4623a16d36ab469c9f93b6113d74737a
+          created: 1789935448260
+          modified: 1791977570876
+          isPrivate: false
+          description: ""
+          sortKey: -1791977566805
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/zonaEndereco"
+        name: /zonaEndereco
+        meta:
+          id: req_c5bdfdcdce544c7eb6237ef9ec2493fa
+          created: 1789935524814
+          modified: 1791977569212
+          isPrivate: false
+          description: ""
+          sortKey: -1791977566705
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Azul",
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/zonaEndereco/11"
+        name: /zonaEndereco/:id
+        meta:
+          id: req_c9cf870c457b476a82fb62ca2e899474
+          created: 1789935645622
+          modified: 1791977567915
+          isPrivate: false
+          description: ""
+          sortKey: -1791977566605
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Rosa"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/zonaEndereco/11"
+        name: /zonaEndereco/:id
+        meta:
+          id: req_98ef1a94dc904fa9a3e7835237aed472
+          created: 1789941550502
+          modified: 1791977566549
+          isPrivate: false
+          description: ""
+          sortKey: -1791977566505
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Tipo de Vínculo
+    meta:
+      id: fld_4e4dbdee77c64851a38819a8516d2958
+      created: 1791977604619
+      modified: 1791977617316
+      sortKey: -1791977271831
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/api/tipoVinculo"
+        name: /tipoVinculo
+        meta:
+          id: req_d91fc704107b490cbd366f0b9a210d9c
+          created: 1789935291958
+          modified: 1791977615924
+          isPrivate: false
+          description: ""
+          sortKey: -1791977609424
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/tipoVinculo/1"
+        name: /tipoVinculo/:id
+        meta:
+          id: req_d218949f7a0641908ac68b4a1a23199b
+          created: 1789935448260
+          modified: 1791977614110
+          isPrivate: false
+          description: ""
+          sortKey: -1791977609324
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/tipoVinculo"
+        name: /tipoVinculo
+        meta:
+          id: req_7e780aa27a0545508300ba0a44c42d14
+          created: 1789935524814
+          modified: 1791977612437
+          isPrivate: false
+          description: ""
+          sortKey: -1791977609224
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Azul",
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/tipoVinculo/11"
+        name: /tipoVinculo/:id
+        meta:
+          id: req_921b512444964de29d9e04d071673ee7
+          created: 1789935645622
+          modified: 1791977610972
+          isPrivate: false
+          description: ""
+          sortKey: -1791977609124
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Rosa"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/tipoVinculo/11"
+        name: /tipoVinculo/:id
+        meta:
+          id: req_963d044d09884b85a7cd4bac0d742897
+          created: 1789941550502
+          modified: 1791977609105
+          isPrivate: false
+          description: ""
+          sortKey: -1791977609024
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Tipo de Ensino Medio
+    meta:
+      id: fld_c50a897a31d045858371a1f990e2b722
+      created: 1791977667680
+      modified: 1791977682236
+      sortKey: -1791977271931
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/api/tipoEnsinoMedioCursado"
+        name: /tipoEnsinoMedioCursado
+        meta:
+          id: req_4ac42b08e0fc403389a0cef02ee4f3f4
+          created: 1789935291958
+          modified: 1791977678721
+          isPrivate: false
+          description: ""
+          sortKey: -1791977671243
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/tipoEnsinoMedioCursado/1"
+        name: /tipoEnsinoMedioCursado/:id
+        meta:
+          id: req_1aa600a557554463835fbe5c19fb0552
+          created: 1789935448260
+          modified: 1791977675724
+          isPrivate: false
+          description: ""
+          sortKey: -1791977671143
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/tipoEnsinoMedioCursado"
+        name: /tipoEnsinoMedioCursado
+        meta:
+          id: req_b482701b00644854af7ae1c6a97542ce
+          created: 1789935524814
+          modified: 1791977674102
+          isPrivate: false
+          description: ""
+          sortKey: -1791977671043
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Azul",
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/tipoEnsinoMedioCursado/11"
+        name: /tipoEnsinoMedioCursado/:id
+        meta:
+          id: req_736bec38f0b948c182d246718cec5563
+          created: 1789935645622
+          modified: 1791977672274
+          isPrivate: false
+          description: ""
+          sortKey: -1791977670943
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Rosa"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/tipoEnsinoMedioCursado/11"
+        name: /tipoEnsinoMedioCursado/:id
+        meta:
+          id: req_40fa4259513d4232b16e48617950f9f8
+          created: 1789941550502
+          modified: 1791977670931
+          isPrivate: false
+          description: ""
+          sortKey: -1791977670843
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Situação
+    meta:
+      id: fld_945805d5cd2f41448a0b6edbe92ac3e1
+      created: 1791977707947
+      modified: 1791977720000
+      sortKey: -1791977272031
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/api/situacao"
+        name: /situacao
+        meta:
+          id: req_db2454129fa0445ebec5bbb90cdb10d4
+          created: 1789935291958
+          modified: 1791977716994
+          isPrivate: false
+          description: ""
+          sortKey: -1791977710456
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/situacao/1"
+        name: /situacao/:id
+        meta:
+          id: req_fc9c53678f2744dc95fe7f526638465f
+          created: 1789935448260
+          modified: 1791977715526
+          isPrivate: false
+          description: ""
+          sortKey: -1791977710356
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/situacao"
+        name: /situacao
+        meta:
+          id: req_5dd21db1460e415ba20e44c0a949d7f0
+          created: 1789935524814
+          modified: 1791977713441
+          isPrivate: false
+          description: ""
+          sortKey: -1791977710256
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Azul",
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/situacao/11"
+        name: /situacao/:id
+        meta:
+          id: req_5228a6b0b99d4722859b1e3e7e2ad437
+          created: 1789935645622
+          modified: 1791977711358
+          isPrivate: false
+          description: ""
+          sortKey: -1791977710156
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Rosa"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/situacao/11"
+        name: /situacao/:id
+        meta:
+          id: req_18732881da884ed893b2104e28ea2c33
+          created: 1789941550502
+          modified: 1791977710146
+          isPrivate: false
+          description: ""
+          sortKey: -1791977710056
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Sexo
+    meta:
+      id: fld_55b8ea0fc9844696a8a833505416455b
+      created: 1791977741510
+      modified: 1791977753248
+      sortKey: -1791977753173
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/api/sexos?mostrarTudo=true"
+        name: /sexos
+        meta:
+          id: req_d6f87f3fa3934579a8c755bb1037d175
+          created: 1789935291958
+          modified: 1791977750733
+          isPrivate: false
+          description: ""
+          sortKey: -1791977745486
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/sexos/1"
+        name: /sexos/:id
+        meta:
+          id: req_bdb44100ac924b02b53546f4dc57f379
+          created: 1789935448260
+          modified: 1791977749186
+          isPrivate: false
+          description: ""
+          sortKey: -1791977745386
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/sexos"
+        name: /sexos
+        meta:
+          id: req_926930414af243adabd19bb8261545d2
+          created: 1789935524814
+          modified: 1791977747900
+          isPrivate: false
+          description: ""
+          sortKey: -1791977745286
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Azul",
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/sexos/1"
+        name: /sexos/:id
+        meta:
+          id: req_a6922c54ab264a368c35b005a62ca095
+          created: 1789935645622
+          modified: 1791977746462
+          isPrivate: false
+          description: ""
+          sortKey: -1791977745186
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/sexos/11"
+        name: /sexos/:id
+        meta:
+          id: req_f60b30dd70ca4fb9800d29ecdb418ffa
+          created: 1789941550502
+          modified: 1791977745150
+          isPrivate: false
+          description: ""
+          sortKey: -1791977745086
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Raça / Cor
+    meta:
+      id: fld_93c7b54c0faa4396a4ff7ee9781d7c69
+      created: 1791977776542
+      modified: 1791977820028
+      sortKey: -1791977819963
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/api/racaCor"
+        name: /racaCor
+        meta:
+          id: req_691c9c23c7874a9aaff176c9f50c19e2
+          created: 1789935291958
+          modified: 1791977816932
+          isPrivate: false
+          description: ""
+          sortKey: -1791977781688
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/racaCor/1"
+        name: /racaCor/:id
+        meta:
+          id: req_fa713b7efcc24d5187c7cd7eb73b193b
+          created: 1789935448260
+          modified: 1791977814120
+          isPrivate: false
+          description: ""
+          sortKey: -1791977781588
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/racaCor"
+        name: /racaCor
+        meta:
+          id: req_d0f36c6308bf4157951dc47326a57b6b
+          created: 1789935524814
+          modified: 1791977784236
+          isPrivate: false
+          description: ""
+          sortKey: -1791977781488
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Azul",
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/racaCor/11"
+        name: /racaCor/:id
+        meta:
+          id: req_f2576430bc31442387d15e3a00903e78
+          created: 1789935645622
+          modified: 1791977782721
+          isPrivate: false
+          description: ""
+          sortKey: -1791977781388
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Rosa"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/racaCor/11"
+        name: /racaCor/:id
+        meta:
+          id: req_d726f37f837e4234ae720bcec321b0bd
+          created: 1789941550502
+          modified: 1791977781355
+          isPrivate: false
+          description: ""
+          sortKey: -1791977781288
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Nível
+    meta:
+      id: fld_a0dad4e6cc324eeebd0c9ee55a558e5d
+      created: 1791977900676
+      modified: 1791977913357
+      sortKey: -1791977913303
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/api/nivel"
+        name: /nivel
+        meta:
+          id: req_98766d246ff74d8d9147ea613a323ccf
+          created: 1789935291958
+          modified: 1791977910237
+          isPrivate: false
+          description: ""
+          sortKey: -1791977904951
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/nivel/1"
+        name: /nivel/:id
+        meta:
+          id: req_af22014020bd4a929e4f0e4fbdb8bc47
+          created: 1789935448260
+          modified: 1791977908741
+          isPrivate: false
+          description: ""
+          sortKey: -1791977904851
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/nivel"
+        name: /nivel
+        meta:
+          id: req_b7bc00aa2cf241f1bb0e20f10382c3f7
+          created: 1789935524814
+          modified: 1791977907283
+          isPrivate: false
+          description: ""
+          sortKey: -1791977904751
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Azul",
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/nivel/11"
+        name: /nivel/:id
+        meta:
+          id: req_75f77ab0a8764638b136c0f16e92264e
+          created: 1789935645622
+          modified: 1791977906035
+          isPrivate: false
+          description: ""
+          sortKey: -1791977904651
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Rosa"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/nivel/11"
+        name: /nivel/:id
+        meta:
+          id: req_a7ee1a9e036d4f55911fba8d38632ec1
+          created: 1789941550502
+          modified: 1791977904615
+          isPrivate: false
+          description: ""
+          sortKey: -1791977904551
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Localização Diferenciada
+    meta:
+      id: fld_2de7911c078747a29fbb54fd8d277fd6
+      created: 1791977930101
+      modified: 1791977943072
+      sortKey: -1791977943008
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/api/localizacaoDiferenciada"
+        name: /localizacaoDiferenciada
+        meta:
+          id: req_9eb7813ac4c54c6e973665cec8b253a0
+          created: 1789935291958
+          modified: 1791977938667
+          isPrivate: false
+          description: ""
+          sortKey: -1791977933473
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/localizacaoDiferenciada/1"
+        name: /localizacaoDiferenciada/:id
+        meta:
+          id: req_a9758503592d49679dbed7335301d5ff
+          created: 1789935448260
+          modified: 1791977936996
+          isPrivate: false
+          description: ""
+          sortKey: -1791977933373
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/localizacaoDiferenciada"
+        name: /localizacaoDiferenciada
+        meta:
+          id: req_a3eda63df0504063bdf43fef79880878
+          created: 1789935524814
+          modified: 1791977935749
+          isPrivate: false
+          description: ""
+          sortKey: -1791977933273
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Azul",
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/localizacaoDiferenciada/11"
+        name: /localizacaoDiferenciada/:id
+        meta:
+          id: req_9008b39f8b244d87bd5a3d83f6480d52
+          created: 1789935645622
+          modified: 1791977934339
+          isPrivate: false
+          description: ""
+          sortKey: -1791977933173
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Rosa"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/localizacaoDiferenciada/11"
+        name: /localizacaoDiferenciada/:id
+        meta:
+          id: req_9afbda6e03964facb10bc2fafd310478
+          created: 1789941550502
+          modified: 1791977933142
+          isPrivate: false
+          description: ""
+          sortKey: -1791977933073
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Função
+    meta:
+      id: fld_589fd860cfc64969943367449c2bdf3f
+      created: 1791977983731
+      modified: 1791978002719
+      sortKey: -1791978002665
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/api/funcao"
+        name: /funcao
+        meta:
+          id: req_61b6d6241ef9448d94b1b34d0bada79f
+          created: 1789935291958
+          modified: 1791977999668
+          isPrivate: false
+          description: ""
+          sortKey: -1791977988771
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/funcao/1"
+        name: /funcao/:id
+        meta:
+          id: req_5337553d597a47fc95664a346f1be51d
+          created: 1789935448260
+          modified: 1791977998160
+          isPrivate: false
+          description: ""
+          sortKey: -1791977988671
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/funcao"
+        name: /funcao
+        meta:
+          id: req_0d3c9b76dd744bbb9d74c457b8005cd4
+          created: 1789935524814
+          modified: 1791977991675
+          isPrivate: false
+          description: ""
+          sortKey: -1791977988571
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Azul",
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/funcao/11"
+        name: /funcao/:id
+        meta:
+          id: req_2aa5ac28e1bd4ba19b50707d9808bcef
+          created: 1789935645622
+          modified: 1791977989819
+          isPrivate: false
+          description: ""
+          sortKey: -1791977988471
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Rosa"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/funcao/11"
+        name: /funcao/:id
+        meta:
+          id: req_eee6d6973e2a481a867a92792f3abe89
+          created: 1789941550502
+          modified: 1791977988430
+          isPrivate: false
+          description: ""
+          sortKey: -1791977988371
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Estado Civíl
+    meta:
+      id: fld_610047f110094b2da46a6229777cd5ab
+      created: 1791978035640
+      modified: 1791978049975
+      sortKey: -1791978049912
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/api/estadoCivil"
+        name: /estadoCivil
+        meta:
+          id: req_c4f6042c96774b46bddebb97228c9a60
+          created: 1789935291958
+          modified: 1791978045618
+          isPrivate: false
+          description: ""
+          sortKey: -1791978039409
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/estadoCivil/1"
+        name: /estadoCivil/:id
+        meta:
+          id: req_122fac4acdad4b07b8e7e6f006560616
+          created: 1789935448260
+          modified: 1791978044051
+          isPrivate: false
+          description: ""
+          sortKey: -1791978039309
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/estadoCivil"
+        name: /estadoCivil
+        meta:
+          id: req_675e490038f14512adeb67f6197d8368
+          created: 1789935524814
+          modified: 1791978041445
+          isPrivate: false
+          description: ""
+          sortKey: -1791978039209
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Azul",
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/estadoCivil/11"
+        name: /estadoCivil/:id
+        meta:
+          id: req_e1bf07cc038e4739877c5fb90788df22
+          created: 1789935645622
+          modified: 1791978040189
+          isPrivate: false
+          description: ""
+          sortKey: -1791978039109
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Rosa"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/estadoCivil/11"
+        name: /estadoCivil/:id
+        meta:
+          id: req_40cc9f0f03e14cc0970ea5dedc9a0fbc
+          created: 1789941550502
+          modified: 1791978039050
+          isPrivate: false
+          description: ""
+          sortKey: -1791978039009
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Escolaridade
+    meta:
+      id: fld_8511e8237e9e473f9d29897611fa0290
+      created: 1791978077043
+      modified: 1791978089163
+      sortKey: -1791978089105
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/api/escolaridade"
+        name: /escolaridade
+        meta:
+          id: req_e6042436fd93448daa05c4278289a31f
+          created: 1789935291958
+          modified: 1791978085008
+          isPrivate: false
+          description: ""
+          sortKey: -1791978079700
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/escolaridade/1"
+        name: /escolaridade/:id
+        meta:
+          id: req_a9ac7354c4924a0e89a552d1e77d2019
+          created: 1789935448260
+          modified: 1791978083427
+          isPrivate: false
+          description: ""
+          sortKey: -1791978079600
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/escolaridade"
+        name: /escolaridade
+        meta:
+          id: req_96a21e4f8ba940de986162552b212538
+          created: 1789935524814
+          modified: 1791978082037
+          isPrivate: false
+          description: ""
+          sortKey: -1791978079500
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Azul",
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/escolaridade/11"
+        name: /escolaridade/:id
+        meta:
+          id: req_0f0b7810d01a4ebf979348af05ce6a69
+          created: 1789935645622
+          modified: 1791978080548
+          isPrivate: false
+          description: ""
+          sortKey: -1791978079400
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Rosa"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/escolaridade/11"
+        name: /escolaridade/:id
+        meta:
+          id: req_19f5ee2765fb490eaf430361a3135516
+          created: 1789941550502
+          modified: 1791978079368
+          isPrivate: false
+          description: ""
+          sortKey: -1791978079300
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Departamento
+    meta:
+      id: fld_dac88a81fcf047d9a62d4fbd932fbf42
+      created: 1791978122594
+      modified: 1791978135350
+      sortKey: -1791978135299
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/api/departamento"
+        name: /departamento
+        meta:
+          id: req_a6e9222ee47240bdb53ae21b8f425fea
+          created: 1789935291958
+          modified: 1791978131498
+          isPrivate: false
+          description: ""
+          sortKey: -1791978125425
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/departamento/1"
+        name: /departamento/:id
+        meta:
+          id: req_475c3ee4c78d416d9c1e9bdcf8bb34e4
+          created: 1789935448260
+          modified: 1791978129701
+          isPrivate: false
+          description: ""
+          sortKey: -1791978125325
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/departamento"
+        name: /departamento
+        meta:
+          id: req_76602fc856504ebbb4e1d7aeb5e5e409
+          created: 1789935524814
+          modified: 1791978128193
+          isPrivate: false
+          description: ""
+          sortKey: -1791978125225
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"descricao": "Unidade Integrada Moacir Heráclito dos Remédios (UEMHR)",
+            	"ativo": true,
+            	"inep": "21067287"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/departamento/11"
+        name: /departamento/:id
+        meta:
+          id: req_4e6a708a69dc43b59c30c148b06d214b
+          created: 1789935645622
+          modified: 1791978126729
+          isPrivate: false
+          description: ""
+          sortKey: -1791978125125
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Rosa"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/departamento/11"
+        name: /departamento/:id
+        meta:
+          id: req_f43a6a543cee4336a268dfb14b4fa731
+          created: 1789941550502
+          modified: 1791978125089
+          isPrivate: false
+          description: ""
+          sortKey: -1791978125025
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Comunidades Indígenas
+    meta:
+      id: fld_7334323081054e74ae72e38140bbdb1a
+      created: 1791978153534
+      modified: 1791978167179
+      sortKey: -1791978167124
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/api/comunidadesindigenas"
+        name: /comunidadesindigenas
+        meta:
+          id: req_4290c34c64d14ebe88c41b2a8783573c
+          created: 1789935291958
+          modified: 1791978164572
+          isPrivate: false
+          description: ""
+          sortKey: -1791978158975
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/comunidadesindigenas/1"
+        name: /comunidadesindigenas/:id
+        meta:
+          id: req_4d534ccb142a436e9b171da97e91aeee
+          created: 1789935448260
+          modified: 1791978163100
+          isPrivate: false
+          description: ""
+          sortKey: -1791978158875
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/comunidadesindigenas"
+        name: /comunidadesindigenas
+        meta:
+          id: req_9c00a205921f4f2eba5a6c5bc7a0822b
+          created: 1789935524814
+          modified: 1791978161717
+          isPrivate: false
+          description: ""
+          sortKey: -1791978158775
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Yanomami",
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/comunidadesindigenas/11"
+        name: /comunidadesindigenas/:id
+        meta:
+          id: req_a374a107aeba49d39a39c92dbb7ffaf0
+          created: 1789935645622
+          modified: 1791978159859
+          isPrivate: false
+          description: ""
+          sortKey: -1791978158675
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Rosa"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/comunidadesindigenas/110"
+        name: /comunidadesindigenas/:id
+        meta:
+          id: req_d1f8d023cf2140c18ff861de5f1d93c8
+          created: 1789941550502
+          modified: 1791978158640
+          isPrivate: false
+          description: ""
+          sortKey: -1791978158575
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Cargo
+    meta:
+      id: fld_3b1565782b2e42998403935e0dc044d3
+      created: 1791978184879
+      modified: 1791978196257
+      sortKey: -1791978196209
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/api/cargo"
+        name: /cargo
+        meta:
+          id: req_7233e5958c534049befeaa83bb063ebe
+          created: 1789935291958
+          modified: 1791978193657
+          isPrivate: false
+          description: ""
+          sortKey: -1791978188622
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/cargo/1"
+        name: /cargo/:id
+        meta:
+          id: req_0fb2a2511aaf43549a209794e69789f9
+          created: 1789935448260
+          modified: 1791978192237
+          isPrivate: false
+          description: ""
+          sortKey: -1791978188522
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/cargo"
+        name: /cargo
+        meta:
+          id: req_97f538ee1e244abcabe0a00db5558ec6
+          created: 1789935524814
+          modified: 1791978191032
+          isPrivate: false
+          description: ""
+          sortKey: -1791978188422
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Azul",
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/cargo/11"
+        name: /cargo/:id
+        meta:
+          id: req_9ff574400e6e41f38dc45b5ce40b3ec4
+          created: 1789935645622
+          modified: 1791978189537
+          isPrivate: false
+          description: ""
+          sortKey: -1791978188322
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Rosa"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/cargo/11"
+        name: /cargo/:id
+        meta:
+          id: req_839ac14b8e0a4ca1ba1976a9356407f7
+          created: 1789941550502
+          modified: 1791978188277
+          isPrivate: false
+          description: ""
+          sortKey: -1791978188222
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Escolaridade
+    meta:
+      id: fld_5b2a84209f8043b39ed0c6712ee7b1e3
+      created: 1791978209126
+      modified: 1791978224729
+      sortKey: -1791978224678
+      description: ""
+    children:
+      - url: "{{base_url}}/api/escolaridade"
+        name: /escolaridade
+        meta:
+          id: req_87500e80a1a94669b5670b9b5cd76f69
+          created: 1787662720612
+          modified: 1791978211567
+          isPrivate: false
+          description: ""
+          sortKey: -1791978211513
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/escolaridade/"
+        name: /escolaridade
+        meta:
+          id: req_aabc1fdd67854dda9d32790d1b39e650
+          created: 1787840766207
+          modified: 1791978214515
+          isPrivate: false
+          description: ""
+          sortKey: -1791978211313
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Digitar Escolaridade",
+            	"ativo": false
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/escolaridade/11"
+        name: /escolaridade/:id
+        meta:
+          id: req_8e55db1f79df4fa7916d10f39ca1ca8c
+          created: 1788273963129
+          modified: 1791978213337
+          isPrivate: false
+          description: ""
+          sortKey: -1791978211413
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/sexos/7"
+        name: /escolaridade/:id
+        meta:
+          id: req_97872fede1a147dc96d3bf24c86b98a9
+          created: 1788357280151
+          modified: 1791978216835
+          isPrivate: false
+          description: ""
+          sortKey: -1791978211113
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ base_url }}/api/escolaridade/11"
+        name: /escolaridade/:id
+        meta:
+          id: req_7c122ae2569c42f89a25819c8fc6383c
+          created: 1788360720421
+          modified: 1791978215629
+          isPrivate: false
+          description: ""
+          sortKey: -1791978211213
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "M",
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Usuarios
+    meta:
+      id: fld_b0ee549c0ea046109a023fbc0fb48b3f
+      created: 1791978258948
+      modified: 1791978269129
+      sortKey: -1791978269073
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/api/usuarios"
+        name: /usuarios
+        meta:
+          id: req_6f1860c08cf14c3da87fe08bf441c39d
+          created: 1789411309052
+          modified: 1791978267395
+          isPrivate: false
+          description: ""
+          sortKey: -1791978261516
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/usuarios/1"
+        name: /usuarios/:id
+        meta:
+          id: req_67f3222cce624bb798e7903f05897117
+          created: 1789531667297
+          modified: 1791978265918
+          isPrivate: false
+          description: ""
+          sortKey: -1791978261416
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/usuarios"
+        name: /usuarios
+        meta:
+          id: req_0d1e920d70f64f8e80345d2f8b2c7263
+          created: 1789531736874
+          modified: 1791978264443
+          isPrivate: false
+          description: ""
+          sortKey: -1791978261316
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "teste",
+            	"email": "jovan.louzeio@gmail.com",
+            	"senha": "undefined",
+            	"permissao": "ADMIN"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/usuarios/3"
+        name: /usuarios/:id
+        meta:
+          id: req_fd75fa78582d4dcc8529a5bb019bb924
+          created: 1789532928398
+          modified: 1791978262899
+          isPrivate: false
+          description: ""
+          sortKey: -1791978261216
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/api/usuarios/5"
+        name: /usuarios/:id
+        meta:
+          id: req_b0b3398b037b433085da81cd0b0bb64b
+          created: 1789533089195
+          modified: 1791978261284
+          isPrivate: false
+          description: ""
+          sortKey: -1791978261116
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_3edd7ec30ebb9cb8d5c1905467da7950742c7bd7
+    created: 1791977186163
+    modified: 1791977186163
+environments:
+  name: Base Environment
+  meta:
+    id: env_3edd7ec30ebb9cb8d5c1905467da7950742c7bd7
+    created: 1791977186161
+    modified: 1791977186161
+    isPrivate: false

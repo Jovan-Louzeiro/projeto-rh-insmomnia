@@ -12,7 +12,7 @@ collection:
     meta:
       id: req_992d61c2dfff4c9484074c4f73f6fb7a
       created: 1787662720612
-      modified: 1791208055225
+      modified: 1791924209950
       isPrivate: false
       description: ""
       sortKey: -1788358570289.75
@@ -20,6 +20,11 @@ collection:
     body:
       mimeType: application/json
       text: ""
+    parameters:
+      - name: mostrarTudo
+        value: "true"
+        description: ""
+        disabled: true
     headers:
       - name: Content-Type
         value: application/json
@@ -40,7 +45,7 @@ collection:
     meta:
       id: req_67042ec1b0a54e5aabf1bfa66553d46a
       created: 1787840766207
-      modified: 1791210317089
+      modified: 1791903698274
       isPrivate: false
       description: ""
       sortKey: -1788358247755.0625
@@ -52,10 +57,10 @@ collection:
         	"ativo": true,
         	
         	"nome_completo": "Jovan Louzeiro Silva",
-        	"cpf": "633.669.520-40",
-        	"nis_pis": "67487952647",
+        	"cpf": "886.387.850-11",
+        	"nis_pis": "67488952647",
         	
-        	"data_nascimento": "21/06/2008",
+        	"data_nascimento": "2008-06-21",
         	"nacionalidade_id": 1,
         	"pais_origem_id": 1,
         	"municipio_nascimento_id": 1,
@@ -69,7 +74,7 @@ collection:
         	"uniao_estavel": false,
         	
         	"sexo_id": 1,
-        	"genero_id": 1,
+        	"genero_id": 2,
         	"racacor_id": 3,
         	
         	"cep": "65295-000",
@@ -79,7 +84,16 @@ collection:
         	"municipio_endereco_id": 1,
         	"zona_endereco_id": 1,
         	
-        	"cartao_sus": "879777774123456",
+        	"certidao": {
+        		"nova_certidao": true,
+        		"tipo_certidao": "NASCIMENTO",
+        		
+        		"matricula": "910500.01.55.1991.1.56530.845.5760128-17",
+        		
+        		"data_emissao": "2009-06-21"
+        	},
+        	
+        	"cartao_sus": "879777754123456",
         	
         	"situacao_id": 1,
         	"escolaridade_id": 2,
@@ -106,12 +120,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: "{{base_url}}/api/servidores/11"
+  - url: "{{base_url}}/api/servidores/14"
     name: /servidores/:id
     meta:
       id: req_3b519f58cf2e489c8cda6e587c0d82ef
       created: 1788273963129
-      modified: 1791179812840
+      modified: 1791976949540
       isPrivate: false
       description: ""
       sortKey: -1788358355266.625
@@ -129,12 +143,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: "{{base_url}}/api/generos/11"
+  - url: "{{base_url}}/api/servidores/10"
     name: /servidores/:id
     meta:
       id: req_ba2e9c4affd7497c9734f087af77f420
       created: 1788357280151
-      modified: 1791179882987
+      modified: 1791262175904
       isPrivate: false
       description: ""
       sortKey: -1788357280151
@@ -152,12 +166,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: "{{ base_url }}/api/servidores/1"
+  - url: "{{ base_url }}/api/servidores/13"
     name: /servidores/:id
     meta:
       id: req_7e57cfa17c364a8fad32088b086923f8
       created: 1788360720421
-      modified: 1791210455380
+      modified: 1791925800112
       isPrivate: false
       description: ""
       sortKey: -1788358140243.5
@@ -166,7 +180,7 @@ collection:
       mimeType: application/json
       text: |-
         {
-        	"complemento": ""
+        	"ativo": false
         }
     headers:
       - name: Content-Type
@@ -183,6 +197,790 @@ collection:
         send: true
         store: true
       rebuildPath: true
+  - url: "{{base_url}}/api/servidores/14/detalharDocumentos"
+    name: /servidores/detalharDocumentos
+    meta:
+      id: req_5bf123a228d24d178f4229f6b8809eb0
+      created: 1791352136033
+      modified: 1791976942117
+      isPrivate: false
+      description: ""
+      sortKey: -1788358462778.1875
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: Authorization
+        value: "{{ _.token_access }}"
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - name: Certidão
+    meta:
+      id: fld_44b6dc25850241b8a45d3d4d7600a9fa
+      created: 1791229775563
+      modified: 1791393085484
+      sortKey: -1791386198005.5
+      description: ""
+    children:
+      - url: "{{base_url}}/api/servidores/16/certidao"
+        name: /servidores/:idServidor/certidao
+        meta:
+          id: req_cc80edf47ab84ce79f7747f9957674a4
+          created: 1791349228973
+          modified: 1791910260420
+          isPrivate: false
+          description: ""
+          sortKey: -1791349231733
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/servidores/10/certidao"
+        name: /servidores/:idServidor/certidao
+        meta:
+          id: req_f50550800e3746149691f173e393e203
+          created: 1791349556700
+          modified: 1791911228474
+          isPrivate: false
+          description: ""
+          sortKey: -1790645391117.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nova_certidao": true,
+            	"tipo_certidao": "NASCIMENTO",
+            	"matricula": "188972 01 55 2021 1 99080 438 4126287-81",
+            	"data_emissao": "2008-06-21"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/servidores/16/certidao"
+        name: /servidores/:idServidor/certidao
+        meta:
+          id: req_41eefa1711b54a0193d302473af96da3
+          created: 1791350735534
+          modified: 1791910584060
+          isPrivate: false
+          description: ""
+          sortKey: -1790997311425.25
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/servidores/16/certidao"
+        name: /servidores/:idServidor/certidao
+        meta:
+          id: req_275b0e6b03f240068feadfc470bea25b
+          created: 1791350965355
+          modified: 1791921298027
+          isPrivate: false
+          description: ""
+          sortKey: -1790293470809.75
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nova_certidao": true,
+            	"tipo_certidao": "NASCIMENTO",
+            	"matricula": "188972 01 55 2021 1 99080 438 4126287-81",
+            	"data_emissao": "2008-08-22"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Cnh
+    meta:
+      id: fld_223e9c9862ce4e02b72feb1f081b73a9
+      created: 1791355215379
+      modified: 1791393089786
+      sortKey: -1791385259236.625
+      description: ""
+    children:
+      - url: "{{base_url}}/api/servidores/10/cnh"
+        name: /servidores/:idServidor/cnh
+        meta:
+          id: req_3394dcc851214cf0bf9eca7f0bf1453c
+          created: 1791355228946
+          modified: 1791913400493
+          isPrivate: false
+          description: ""
+          sortKey: -1791355231662
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "numero": "12345678901",
+                "categoria": "AB",
+                "data_emissao": "2025-01-01",
+                "data_validade": "2030-01-10"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/servidores/16/cnh"
+        name: /servidores/:idServidor/cnh
+        meta:
+          id: req_254538d0b847407a87c4a7a50703f8cb
+          created: 1791355333498
+          modified: 1791927425305
+          isPrivate: false
+          description: ""
+          sortKey: -1791355231762
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/servidores/16/cnh"
+        name: /servidores/:idServidor/cnh
+        meta:
+          id: req_ea80231cb7f346d2b3405eca53985966
+          created: 1791355359928
+          modified: 1791921286038
+          isPrivate: false
+          description: ""
+          sortKey: -1791352231697.5
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "numero": "12345678901",
+                "categoria": "A",
+                "data_emissao": "2025-01-01",
+                "data_validade": "2030-01-10"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/servidores/10/cnh"
+        name: /servidores/:idServidor/cnh
+        meta:
+          id: req_f81f3b39e6414951b8b87a3e122a0591
+          created: 1791355386656
+          modified: 1791355389537
+          isPrivate: false
+          description: ""
+          sortKey: -1791355231712
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Ctps
+    meta:
+      id: fld_d9730646190648e8973bbb4d797532a4
+      created: 1791356662726
+      modified: 1791393092325
+      sortKey: -1791384789852.1875
+      description: ""
+    children:
+      - url: "{{base_url}}/api/servidores/10/ctps"
+        name: /servidores/:idServidor/ctps
+        meta:
+          id: req_d0a168b81cd446f6b1ceb854f8159186
+          created: 1791356672949
+          modified: 1791382405009
+          isPrivate: false
+          description: ""
+          sortKey: -1791356675180
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "tipo_ctps": "ANTIGO",
+                "numero": "12345678",
+                "serie": "00123",
+                "uf_ctps_id": 10,
+                "data_emissao": "01/01/2025"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/servidores/10/ctps"
+        name: /servidores/:idServidor/ctps
+        meta:
+          id: req_4723bbfd7b8c432bb4b884d194635671
+          created: 1791357344214
+          modified: 1791357388206
+          isPrivate: false
+          description: ""
+          sortKey: -1791355953471
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "tipo_ctps": "NOVO",
+                "numero": "12345678",
+                "serie": "00123",
+                "uf_ctps_id": 10,
+                "data_emissao": "01/01/2025"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/servidores/10/ctps"
+        name: /servidores/:idServidor/ctps
+        meta:
+          id: req_e0c37a94db3847c68e751bd7af75bbba
+          created: 1791381587076
+          modified: 1791381596168
+          isPrivate: false
+          description: ""
+          sortKey: -1791356314325.5
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/servidores/10/ctps"
+        name: /servidores/:idServidor/ctps
+        meta:
+          id: req_d12a8759958143608f3a5e18b2d106de
+          created: 1791382369364
+          modified: 1791382374099
+          isPrivate: false
+          description: ""
+          sortKey: -1791356133898.25
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Identidade
+    meta:
+      id: fld_3cece04f52d04a329eee75017ff154c0
+      created: 1791382442930
+      modified: 1791382442930
+      sortKey: -1791382442930
+      description: ""
+    children:
+      - url: "{{base_url}}/api/servidores/10/identidade"
+        name: /servidores/:idServidor/identidade
+        meta:
+          id: req_99c054a8153c46b7a19fbd80d2840d9c
+          created: 1791382434035
+          modified: 1791385858378
+          isPrivate: false
+          description: ""
+          sortKey: -1791382448313
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "tipo_identidade": "RG",
+                "numero": "60461515385",
+                "orgao_emissor": "SSP/MA",
+                "rg_uf_id": 10,
+                "rg_data_emissao": "01/01/2025"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/servidores/10/identidade"
+        name: /servidores/:idServidor/identidade
+        meta:
+          id: req_8a9ffe7cbdb345c89267798d0d26f8b6
+          created: 1791382759330
+          modified: 1791385799427
+          isPrivate: false
+          description: ""
+          sortKey: -1791382448263
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "tipo_identidade": "CIN",
+                "orgao_emissor": "SSP/MA",
+                "rg_uf_id": 10,
+                "rg_data_emissao": "01/01/2025"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/servidores/10/identidade"
+        name: /servidores/:idServidor/identidade
+        meta:
+          id: req_b9c376bce40c465ab9f7e967c7c637b1
+          created: 1791384053029
+          modified: 1791384078789
+          isPrivate: false
+          description: ""
+          sortKey: -1791369561696.5
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/servidores/10/identidade"
+        name: /servidores/:idServidor/tituloeleitor
+        meta:
+          id: req_5d0ae71c78204212b288cff22f392ddb
+          created: 1791389964467
+          modified: 1791389964467
+          isPrivate: false
+          description: ""
+          sortKey: -1791376004954.75
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - name: Titulo de Eleitor
+        meta:
+          id: fld_e753335550704498a783fd41130833cd
+          created: 1791389953081
+          modified: 1791393128025
+          sortKey: -1791369561596.5
+          description: ""
+        children:
+          - url: "{{base_url}}/api/servidores/10/tituloEleitor"
+            name: /servidores/:idServidor/identidade
+            meta:
+              id: req_0114623bf7124723baa60b6b7ff70cdf
+              created: 1791382680182
+              modified: 1791389986989
+              isPrivate: false
+              description: ""
+              sortKey: -1791389967001
+            method: GET
+            headers:
+              - name: Authorization
+                value: "{{ _.token_access }}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{base_url}}/api/servidores/10/tituloEleitor"
+            name: /servidores/:idServidor/tituloEleitor
+            meta:
+              id: req_8cc5f54538fb4c45860f7af8dca1290a
+              created: 1791389996053
+              modified: 1791390164211
+              isPrivate: false
+              description: ""
+              sortKey: -1791389966901
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                    "numero": "673358401120",
+                    "zona": "0055",
+                    "secao": "0586"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: Authorization
+                value: "{{ _.token_access }}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{base_url}}/api/servidores/10/tituloEleitor"
+            name: /servidores/:idServidor/tituloEleitor
+            meta:
+              id: req_ef6d26388b6841f9a4d8d21c45dc8933
+              created: 1791390177560
+              modified: 1791390184408
+              isPrivate: false
+              description: ""
+              sortKey: -1791386207607
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                    "numero": "673358401120",
+                    "zona": "0055",
+                    "secao": "0012"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: Authorization
+                value: "{{ _.token_access }}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{base_url}}/api/servidores/10/tituloEleitor"
+            name: /servidores/:idServidor/identidade
+            meta:
+              id: req_b4046740c00b4ccf9bdb40a9cbca39a4
+              created: 1791390197348
+              modified: 1791390199674
+              isPrivate: false
+              description: ""
+              sortKey: -1791389966951
+            method: DELETE
+            headers:
+              - name: Authorization
+                value: "{{ _.token_access }}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+  - name: Contatos
+    meta:
+      id: fld_b94f9ceef2e14bce93eaa5063fdf83e9
+      created: 1791922186944
+      modified: 1791922191400
+      sortKey: -1791386198105.5
+      description: ""
+    children:
+      - url: "{{base_url}}/api/servidores/13/contatos"
+        name: /servidores/:idServidor/contatos
+        meta:
+          id: req_162032296ca14cb58025b30cdcc37159
+          created: 1791922186944
+          modified: 1791928010549
+          isPrivate: false
+          description: ""
+          sortKey: -1790645391117.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"tipo_contato": "EMAIL",
+            	"contato": "dlsdslsd@gmail.com"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/servidores/16/contatos/2"
+        name: /servidores/:idServidor/contatos
+        meta:
+          id: req_ba2abff388e442d0a509b223bd3f5c1a
+          created: 1791922186944
+          modified: 1791929009248
+          isPrivate: false
+          description: ""
+          sortKey: -1791349231733
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/servidores/16/contatos/3"
+        name: /servidores/:idServidor/contatos
+        meta:
+          id: req_d1eb7636dd374f06800ee2d6bcf6a493
+          created: 1791922186944
+          modified: 1791929059050
+          isPrivate: false
+          description: ""
+          sortKey: -1790293470809.75
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"tipo_contato": "EMAIL",
+            	"contato": "dlsdslsd@gmail.com"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/servidores/16/contatos/5"
+        name: /servidores/:idServidor/contatos
+        meta:
+          id: req_e0330b39818245d39b9eb40110e7d5f9
+          created: 1791922186944
+          modified: 1791929003151
+          isPrivate: false
+          description: ""
+          sortKey: -1790997311425.25
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/api/servidores/16/contatos"
+        name: /servidores/:idServidor/contatos/:id
+        meta:
+          id: req_aa41a22c327149e4a0b6c98de2df7ad3
+          created: 1791925816051
+          modified: 1791949110339
+          isPrivate: false
+          description: ""
+          sortKey: -1790821351271.375
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{{ _.token_access }}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
